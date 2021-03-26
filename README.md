@@ -19,7 +19,7 @@ $ pip install -r requirements.txt
 
 ```sh
 $ pip install -r requirements.test.txt
-$ pytest
+$ pytest -q ./simple_extract/test_simple_extract.py
 ```
 
 ## Choosing desired strategy
@@ -33,7 +33,7 @@ $ python text2emotions.py
 or
 
 ```python
-from text2emotions import get_sorted_emotions, get_main_emotion, get_least_emotion
+from simple_extract import get_sorted_emotions, get_main_emotion, get_least_emotion
 
 txt = "Your phrase here"
 

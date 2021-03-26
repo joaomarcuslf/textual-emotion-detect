@@ -1,10 +1,6 @@
 import pytest
 
-from text2emotions import get_sorted_emotions, get_main_emotion, get_least_emotion
-
-# get_least_emotion(txt)
-# get_main_emotion(txt)
-# get_sorted_emotions(txt)
+from simple_extract import get_sorted_emotions, get_main_emotion, get_least_emotion
 
 def test_get_least_emotion_1():
     least_emotion = get_least_emotion("I'm very happy today!")

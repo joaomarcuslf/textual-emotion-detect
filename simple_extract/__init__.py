@@ -25,8 +25,8 @@ def get_least_emotion(text: str) -> dict:
     return get_sorted_emotions(text)[0]['emotion']
 
 if __name__ == '__main__':
-    input_file = 'text_sample.en.txt'
-    output_file = 'text_output.en.txt'
+    input_file = '../files/text_sample.en.txt'
+    output_file = '../files/text_output.en.txt'
 
     file1 = open(input_file, 'r')
     file2 = open(output_file, 'w')
