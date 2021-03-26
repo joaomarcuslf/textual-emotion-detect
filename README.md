@@ -5,6 +5,7 @@
 - Start the vitual env
 
 ```sh
+$ python -m venv .
 $ source ./bin/activate
 ```
 
