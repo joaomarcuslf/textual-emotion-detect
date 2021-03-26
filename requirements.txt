@@ -6,3 +6,6 @@ numpy==1.20.1
 regex==2021.3.17
 text2emotion==0.0.5
 tqdm==4.59.0
+
+pylint
+autopep8

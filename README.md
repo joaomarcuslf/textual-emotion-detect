@@ -14,6 +14,13 @@ $ source ./bin/activate
 $ pip install -r requirements.txt
 ```
 
+## Testing
+
+```sh
+$ pip install -r requirements.test.txt
+$ pytest
+```
+
 ## Choosing desired strategy
 
 ### Simple one

@@ -1,7 +1,7 @@
 import text2emotion as te
 
-def sort_emotions(emotions_dict):
-    sorted_dict = {k: v for k, v in sorted(emotions_dict.items(), key=lambda item: item[1])}
+def sort_emotions(emotions: dict) -> list:
+    sorted_dict = {k: v for k, v in sorted(emotions.items(), key=lambda item: item[1])}
 
     x = []
 
@@ -13,15 +13,15 @@ def sort_emotions(emotions_dict):
 
     return x
 
-def get_sorted_emotions(text):
+def get_sorted_emotions(text: str) -> dict:
     emotions = sort_emotions(te.get_emotion(text))
 
     return emotions
 
-def get_main_emotion(text):
+def get_main_emotion(text: str) -> dict:
     return get_sorted_emotions(text)[-1]['emotion']
 
-def get_least_emotion(text):
+def get_least_emotion(text: str) -> dict:
     return get_sorted_emotions(text)[0]['emotion']
 
 if __name__ == '__main__':
@@ -32,6 +32,9 @@ if __name__ == '__main__':
     file2 = open(output_file, 'w')
 
     output_lines = []
+
+    print('PROCESS: Importing file')
+    print('PROCESS: Processing file')
 
     for line in file1.readlines():
         file2.write("{}\n".format(line.strip()))
@@ -47,3 +50,5 @@ if __name__ == '__main__':
 
     file1.close()
     file2.close()
+
+    print('PROCESS: Output written')
